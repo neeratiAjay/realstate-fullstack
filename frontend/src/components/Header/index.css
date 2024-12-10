@@ -1,11 +1,12 @@
 .header-container{
     min-height:5vh;
+    width: 100%;
     background-color: rgb(133, 44, 248);
     display: flex;
     align-items: center;
     justify-content: center;
     padding:4px;
-    box-shadow:2px 2px 2px 2px #363638;
+    border: none;
 }
 .link{
     font-family: "roboto";

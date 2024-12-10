@@ -10,7 +10,11 @@ const {v4:uuidv4} = require("uuid")
 const app = express()
 
 const dbPath = path.join(__dirname,"users.db")
-app.use(cors())
+app.use(cors({
+    origin: 'https://realstate-fullstack-1.onrender.com', // Replace with your frontend URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify allowed methods
+    allowedHeaders: ['Content-Type', 'Authorization'] // Allowed headers
+  }));
 app.use(express.json())
 
 let db = null 

@@ -28,7 +28,8 @@ const CustomerDetails = props => {
         event.preventDefault()
         console.log("update Function Working")
         const date = format(new Date(),"dd-MM-yyy")
-        const url =`http://localhost:4000/customer/${id}`
+        //const url =`http://localhost:4000/customer/${id}`
+        const url = `https://realstate-fullstack.onrender.com/customer/${id}`
 
         const customerDetails = {
             name:updatedName,

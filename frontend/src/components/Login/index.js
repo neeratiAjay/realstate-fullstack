@@ -20,7 +20,8 @@ const Login = () => {
 
     const submitData =async (event) =>{
       event.preventDefault()
-      const url = "http://localhost:4000/login"
+      //const url = "http://localhost:4000/login"
+      const url = "https://realstate-fullstack.onrender.com/login"
       const options = {
         method: 'POST',
         headers:{ 'Content-Type': 'application/json'},

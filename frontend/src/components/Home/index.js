@@ -3,7 +3,7 @@ import Cookies from "js-cookie"
 //import Popup from 'reactjs-popup'
 import { FaSearch } from "react-icons/fa" 
 import {Link} from "react-router-dom"
-
+import Header from "../Header"
 import CustomerDetails from "../CustomerDetails"
 
 import "./index.css"
@@ -26,7 +26,8 @@ class Home extends Component{
         const {searchInput} = this.state 
         
         const jwtToken = Cookies.get("jwt_token")
-        const url = `http://localhost:4000/customer?search_q=${searchInput}`
+        //const url = `http://localhost:4000/customer?search_q=${searchInput}`
+        const url = `https://realstate-fullstack.onrender.com/customer?search_q=${searchInput}`
         const options = {
             method:"GET",
             headers :{
@@ -62,7 +63,8 @@ class Home extends Component{
     deleteCustomer = async(id)=>{
         const {customersData} = this.state
         const jwtToken = Cookies.get("jwt_token")
-        const url = `http://localhost:4000/customer/${id}`
+        //const url = `http://localhost:4000/customer/${id}`
+        const url = `https://realstate-fullstack.onrender.com/customer/${id}`
         const options ={
             method:"DELETE",
             headers:{
@@ -119,6 +121,7 @@ class Home extends Component{
         
         return (
             <div className="home-bg-container">
+                <Header/>
                <h1 className="home-customer-heading">Customers Response  Details</h1>
                <div className="search-flex-row-container">
                 <div className="input-flex-row-container">

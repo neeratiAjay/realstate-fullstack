@@ -3,7 +3,7 @@ import {useState} from 'react'
 import Cookies from "js-cookie"
 import {format} from "date-fns"
 
-
+import Header from '../Header'
 import { propertyTypes,properties } from '../Properties'
 
 import "./index.css"
@@ -39,7 +39,8 @@ const Customer = () => {
       moreInformation,
       date:formatDate,
     }
-    const url = "http://localhost:4000/customer"
+    //const url = "http://localhost:4000/customer"
+    const url = "https://realstate-fullstack.onrender.com/customer"
     const options = {
       method :"POST",
       headers:{
@@ -69,7 +70,7 @@ const Customer = () => {
 
   return (
     <div className='customer-bg-container'>
-      
+      <Header/>
         <form className='customer-form-container' onSubmit={submitCustomerDetails}>
         <h1 className='customer-heading'>Enter Customer details</h1>
         <div className='flex-row'>

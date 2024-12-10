@@ -23,7 +23,8 @@ const Register = () => {
     const submitUserData = async (event) =>{
         event.preventDefault()
         try{
-        const url = "http://localhost:4000/register"
+        //const url = "http://localhost:4000/register" 
+        const url = "https://realstate-fullstack.onrender.com/register"
         
         const options = {
             method:"POST",
