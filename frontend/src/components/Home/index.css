@@ -1,0 +1,301 @@
+.home-bg-container{
+    margin: 0px;
+    min-height: 100vh;
+    background-color:#fdd7a3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.home-customer-heading{
+    font-size: 44px;
+    font-family: "roboto";
+    font-style: italic;
+    margin: 10px;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: underline;
+}
+
+table {
+    width:97%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-collapse: separate; /* Default behavior */
+    border-spacing:10px; /* Adds spacing between cells */
+  }
+
+  thead {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  thead th {
+    padding: 12px;
+    text-align:center;
+    font-size: 16px;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  tbody tr:hover {
+    background-color:yellow;
+  }
+
+  tbody td {
+    padding: 10px;
+    text-align:center;
+    border-bottom: 1px solid #ddd;
+  }
+
+  tfoot {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  tfoot td {
+    padding: 12px;
+    text-align: right;
+    font-size: 14px;
+  }
+
+  caption {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+.edit-btn{
+    background-color: transparent;
+    border:1px solid #1722f2;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    color:#1722f2;
+    margin: 0;
+    border-radius: 4px;
+    padding: 4px;
+}
+.delete-btn{
+  background-color:transparent;
+  border:1px solid #ea0707;
+  color: #ea0707;
+  font-size: 16px;
+  font-family: "roboto";
+  font-weight: 500;
+  text-align: center;
+  margin: 0;
+  outline: none;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 4px;
+}
+.search-flex-row-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin-top: 0;
+}
+.input-flex-row-container{
+  display: flex;
+  justify-content: space-between;
+  height: 35px;
+  width:50%;
+  border:2px solid #6c6969;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+.search-input{
+  height: 35px;
+  width:90%;
+  background-color: transparent;
+  padding-left: 10px;
+  color:#000000;
+  font-size: 16px;
+  font-family: "roboto";
+  font-weight: 400;
+}
+.search-btn{
+  background-color: transparent;
+  height: 35px;
+  width: 50px;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+  border-left:2px solid #6c6969;
+}
+.popup-container{
+  min-height:150px;
+  min-width: 200px;
+  background-color:#a8fafb;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  opacity: 0.9;
+  box-shadow:0px 4px 4px #2e2828;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.flex-column-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  opacity:1;
+}
+.popup-btn-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+}
+.close-btn{
+  background-color:#8040da;
+  color: #ffffff;
+  height: 30px;
+  width: 100px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+  text-align: center;
+  font-weight:bold;
+
+}
+.confirm-btn{
+  background-color:#f3612e;
+  color: #ffffff;
+  height: 30px;
+  width: 100px;
+  font-weight:bold;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+  text-align: center;
+
+}
+.popup-text{
+  font-size: 16px;
+  font-family: "roboto";
+  font-weight:bold;
+  color: #000000;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.add-user{
+  background-color:#064df4f5;
+  color: #ffffff;
+  height: 35px;
+  min-width: 150px;
+  font-weight:bold;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* CUSTOMER DETAILS PAGE CSS REUSING */
+.customer-form-container{
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  min-width: 30%;
+  padding: 20px;
+  background-color: #f8f4f4;
+  border-radius: 12px;
+  box-shadow: 4px 4px 4px 4px #6a6262;
+}
+
+.label-text{
+  color: #252424;
+  font-family: "roboto";
+  font-style: oblique;
+  font-weight:bold;
+  font-size: 18px;
+  padding-top:7px;
+  padding-right: 10px;
+
+}
+.flex-row{
+  display: flex;
+}
+.customer-name-input{
+  color: black;
+  font-weight: 300;
+  font-size: 18px;
+
+}
+.property-type-dropdown{
+  padding: 2px;
+  outline: none;
+  margin-top:10px;
+  margin-bottom: 10px;
+  height: 25px;
+  font-size: 14px;
+  font-family: "roboto";
+
+}
+.property-type-option{
+  font-family: "roboto";
+  font-weight:400;
+  font-size: 14px;
+  padding: 2px;
+}
+.location-input{
+  outline: none;
+  border: 1px solid #bfbfbf;
+  border-radius:4px;
+  margin-top: 5px;
+  font-family: "roboto";
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.label-margin-top{
+  margin-top: 15px;
+}
+
+.customer-submit-btn{
+  height: 35px;
+  width:80%;
+  background-color: #1a75ff;
+  color: #ffffff;
+  text-align: center;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-family: "roboto";
+  font-weight:bold;
+  outline: none;
+  cursor: pointer;
+  align-self: center;
+  margin-top: 10px;
+}
+.self-center{
+  align-self: center;
+}
+
+
+
+
+
+.loader-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
