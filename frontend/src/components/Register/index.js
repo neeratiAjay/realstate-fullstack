@@ -1,6 +1,6 @@
 
 import {useState} from "react"
-import {useNavigate} from "react-router-dom"
+import {useNavigate,Link} from "react-router-dom"
 
 // close eye icon 
 import { FaEyeSlash } from "react-icons/fa6";
@@ -101,6 +101,7 @@ const Register = () => {
         </div>
         <button type = "submit" className = "submit-btn"> Submit</button>
         {showError && <p className="err-text">* {errMsg}</p>}
+        <p className="link-login">If you already have an account? <Link to ="/login">Signin</Link></p>
     </form>
     </div>
 

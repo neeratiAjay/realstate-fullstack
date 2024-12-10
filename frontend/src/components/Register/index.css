@@ -101,3 +101,9 @@ label{
     outline: none;
     cursor: pointer;
   }
+  .link-login{
+    font-family: "roboto";
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+  }

@@ -1,6 +1,6 @@
 
 import {useState} from "react"
-import {useNavigate} from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
 import Cookies from "js-cookie"
 import { FaEyeSlash } from "react-icons/fa6";
 import { FaEye } from "react-icons/fa6";
@@ -62,6 +62,7 @@ const Login = () => {
         </div>
         <button type = "submit" className = "submit-btn"> Submit</button>
         {showError && <p className="err-text">* {errMsg}</p>}
+        <p className="link">If you don,t have an account? <Link to = "/register" className="">Signup</Link></p>
     </form>
     </div>
 
