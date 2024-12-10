@@ -11,7 +11,7 @@ const Header = () => {
     
     const logoutHandler = ()=>{
         Cookies.remove("jwt_token")
-        navigate("/")
+        navigate("/login",{replace:true})
     }
 
   return (
