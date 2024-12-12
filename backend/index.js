@@ -15,6 +15,8 @@ app.use(cors({
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify allowed methods
     allowedHeaders: ['Content-Type', 'Authorization'] // Allowed headers
   }));
+
+app.use(express.static(path.join(__dirname,"build")))
 app.use(express.json())
 
 let db = null 
@@ -37,7 +39,9 @@ const initializeServer = async()=>{
 }
 initializeServer()
 
-
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 const authenticationToken =  (request,response,next)=>{
     const  authHeader = request.headers["authorization"]
