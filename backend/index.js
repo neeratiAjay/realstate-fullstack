@@ -1,3 +1,4 @@
+require('./backup.js')
 const express = require("express")
 const path = require("path")
 const {open} = require("sqlite")
@@ -30,6 +31,9 @@ const initializeServer = async()=>{
             filename:dbPath,
             driver:sqlite3.Database
         })
+        // Trigger backup on server startup
+        require('./backup.js'); // Backup when the server starts
+        
         app.listen(port,()=>{
             console.log(`Server Running at http://localhost:${port}/`)
         })
