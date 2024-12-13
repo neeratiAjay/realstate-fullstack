@@ -19,6 +19,8 @@ app.use(cors({
 
 app.use(express.json())
 
+
+
 let db = null 
 const port = 4000
 
@@ -38,6 +40,7 @@ const initializeServer = async()=>{
     }
 }
 initializeServer()
+
 
 
 
@@ -206,10 +209,7 @@ app.put("/customer/:id",authenticationToken,async(request,response)=>{
     }
 })
 
-app.use(express.static(path.join(__dirname,"build")))
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
+
 
 /*
 const {userId} = request
