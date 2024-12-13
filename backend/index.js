@@ -1,4 +1,4 @@
-const backupDatabase = require('./backup.js')
+
 const express = require("express")
 const path = require("path")
 const {open} = require("sqlite")
@@ -27,34 +27,6 @@ const port = 4000
 
 const initializeServer = async()=>{
     try{
-        
-        if (!fs.existsSync(dbPath)) {
-            console.log("Primary database not found. Attempting to restore from the latest backup...");
-
-            // Restore the latest backup
-            const backupsDir = path.join(__dirname, "backups");
-            if (fs.existsSync(backupsDir)) {
-                const backupFiles = fs.readdirSync(backupsDir).filter(file => file.endsWith(".db"));
-                if (backupFiles.length > 0) {
-                    // Get the most recent backup
-                    const latestBackup = backupFiles.sort((a, b) => b.localeCompare(a))[0];
-                    const backupPath = path.join(backupsDir, latestBackup);
-
-                    fs.copyFileSync(backupPath, dbPath);
-                    console.log(`Database restored from backup: ${latestBackup}`);
-                } else {
-                    console.error("No backup files found. Starting with a fresh database.");
-                }
-            } else {
-                console.error("Backup directory does not exist. Starting with a fresh database.");
-            }
-        }
-
-
-
-
-
-
 
         db = await open({
             filename:dbPath,
@@ -67,11 +39,7 @@ const initializeServer = async()=>{
             console.log(`Server Running at http://localhost:${port}/`)
         })
         
-        process.on('SIGINT', () => {
-            console.log('Server is shutting down. Creating final backup...');
-            backupDatabase();
-            process.exit();
-        });
+       
         
     }catch(e){
         console.log(`Db Error ${e.message}`)
@@ -250,17 +218,3 @@ app.put("/customer/:id",authenticationToken,async(request,response)=>{
 
 
 
-/*
-const {userId} = request
-    const {id} = request.params
-    const{name,
-    mobile,
-    budget,
-    location,
-    moreInformation,
-    propertyType,
-    propertyName,
-    date} = request.body
-    
-   console.log(request)
-*/
