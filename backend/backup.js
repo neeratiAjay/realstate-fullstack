@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const sqlite3 = require("sqlite3").verbose();
 
 // Function to backup the database
 function backupDatabase() {

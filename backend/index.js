@@ -67,6 +67,12 @@ const initializeServer = async()=>{
             console.log(`Server Running at http://localhost:${port}/`)
         })
         
+        process.on('SIGINT', () => {
+            console.log('Server is shutting down. Creating final backup...');
+            backupDatabase();
+            process.exit();
+        });
+        
     }catch(e){
         console.log(`Db Error ${e.message}`)
         process.exit(1)
@@ -74,11 +80,7 @@ const initializeServer = async()=>{
 }
 initializeServer()
 
-process.on('SIGINT', () => {
-    console.log('Server is shutting down. Creating final backup...');
-    backupDatabase();
-    process.exit();
-});
+
 
 
 const authenticationToken =  (request,response,next)=>{
