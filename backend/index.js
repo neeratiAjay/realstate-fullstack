@@ -13,9 +13,9 @@ const app = express()
 const dbPath = path.join(__dirname,"./db/users.db")
 
 app.use(cors({
-    origin:'https://realstate-fullstack-1.onrender.com', // Replace with your frontend URL
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify allowed methods
-    allowedHeaders: ['Content-Type', 'Authorization'] // Allowed headers
+    origin: 'https://realstate-fullstack-1.onrender.com', // Replace with your frontend's URL
+    methods: 'GET,POST,PUT,DELETE',
+    credentials: true // Include if your request requires cookies or authentication headers
   }));
   
  //app.use(cors())
