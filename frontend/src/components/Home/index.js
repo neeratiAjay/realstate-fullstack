@@ -63,8 +63,8 @@ class Home extends Component{
     deleteCustomer = async(id)=>{
         const {customersData} = this.state
         const jwtToken = Cookies.get("jwt_token")
-        //const url = `http://localhost:4000/customer/${id}`
-        const url = `https://realstate-fullstack.onrender.com/customer/${id}`
+        const url = `http://localhost:4000/customer/${id}`
+        //const url = `https://realstate-fullstack.onrender.com/customer/${id}`
         const options ={
             method:"DELETE",
             headers:{

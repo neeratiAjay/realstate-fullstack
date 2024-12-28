@@ -41,6 +41,7 @@ const Customer = () => {
     }
     //const url = "http://localhost:4000/customer"
     const url = "https://realstate-fullstack.onrender.com/customer"
+    //const url = "http://localhost:4000/customer"
     const options = {
       method :"POST",
       headers:{
