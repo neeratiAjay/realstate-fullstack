@@ -33,8 +33,8 @@ const initializeServer = async()=>{
             driver:sqlite3.Database
         })
         
-        backupDatabase()
-        setInterval(backupDatabase, 3600000)
+        
+        
         app.listen(port,()=>{
             console.log(`Server Running at http://localhost:${port}/`)
         })
