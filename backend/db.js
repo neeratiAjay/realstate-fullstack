@@ -1,6 +1,6 @@
 const sqlite3 = require("sqlite3").verbose()
 
-const db = new sqlite3.Database("./users.db",(err)=>{
+const db = new sqlite3.Database("./db/users.db",(err)=>{
  if (err){
     console.log(`Db Initialize Error : ${e.message}`)
  }else{
